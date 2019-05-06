@@ -10,8 +10,8 @@ export default {
       mysubway = window.subway("mysubway", { easy: 1 });
       mysubway.event.on("subway.complete", () => {
         /* Info window example
-        mysubway.addInfoWindow("南锣鼓巷");
-        var center = mysubway.GetStCenter("南锣鼓巷");
+        mysubway.addInfoWindow("北海北");
+        var center = mysubway.GetStCenter("北海北");
         mysubway.setCenter(center);
         */
         /* Station marker example
@@ -43,7 +43,7 @@ export default {
           `
         });
         */
-        /* Custom station example
+        // /* Custom station example
         var detailOpts = {
           type: "circle",
           r: 14,
@@ -51,15 +51,16 @@ export default {
         };
 
         mysubway.addCustomNode("南锣鼓巷", detailOpts);
-        */
-        /* Line filter example
+        // */
+        // /* Line filter example
         mysubway.showLine("2号线");
 
         var $select_obj = document.getElementById("g-select");
         mysubway.setFitView($select_obj);
         var center = mysubway.getSelectedLineCenter();
         mysubway.setCenter(center);
-        */
+        // */
+        /*
         var start = "北土城",
           end = "天安门西";
 
@@ -69,6 +70,7 @@ export default {
         mysubway.route(start, end, {
           closeBtn: true
         });
+        */
       });
     });
   }
