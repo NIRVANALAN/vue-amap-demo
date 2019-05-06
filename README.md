@@ -1,29 +1,11 @@
 # vue-amap-demo
 
-## Project setup
-```
-npm install
-```
+## Info
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+A demo for using amap with Vue.js.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Mainly include Subway JavaScript API part of amap.
 
-### Run your tests
-```
-npm run test
-```
+## Reference
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[高德地铁图开发者指南](https://lbs.amap.com/api/subway-api/subway-summary/)
