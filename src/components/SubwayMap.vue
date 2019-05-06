@@ -14,6 +14,7 @@ export default {
         var center = mysubway.GetStCenter("南锣鼓巷");
         mysubway.setCenter(center);
         */
+        /* Station marker example
         var marker1 = mysubway.addMarker("南锣鼓巷", {});
         var marker2 = mysubway.addMarker("北海北", {
           width: 19,
@@ -28,10 +29,50 @@ export default {
           </div>
           `
         });
+        */
+        mysubway.addInfoWindow("南锣鼓巷", {
+          isCustom: true,
+          content: `
+          <div class="tip_out">
+            <div class="tip">
+              <div class="tip_name">南锣古巷</div>
+              <div class="tip_footer"></div>
+            </div>
+          </div>
+          `
+        });
       });
     });
   }
 };
 </script>
 <style>
+.tip_out {
+  position: relative;
+}
+.tip {
+  position: absolute;
+
+  width: 120px;
+  left: -60px;
+  bottom: 0;
+}
+.tip_name {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 4px;
+}
+.tip .tip_start,
+.tip .tip_end {
+  float: left;
+}
+.tip_footer {
+  height: 10px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAALCAYAAACUPhZAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAG5JREFUeNpiNDY2FmNgYJgDxFIM1AOvgDidCcpIAeJn1DQYiB8zIQlQwwK4wSAOE5oEJRagGIxuOCUWYBiMzXByLMBqMC7DSbEAp8H4DCfGArwGEzIcnwUEDSbGcGwWEGUwsYYjW3CBWINBACDAACkeLdxbVjieAAAAAElFTkSuQmCC)
+    center top no-repeat;
+  background-size: 21px 10px;
+}
 </style>
