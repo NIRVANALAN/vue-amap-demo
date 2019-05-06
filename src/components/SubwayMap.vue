@@ -43,6 +43,7 @@ export default {
           `
         });
         */
+        /* Custom station example
         var detailOpts = {
           type: "circle",
           r: 14,
@@ -50,6 +51,13 @@ export default {
         };
 
         mysubway.addCustomNode("南锣鼓巷", detailOpts);
+        */
+        mysubway.showLine("2号线");
+
+        var $select_obj = document.getElementById("g-select");
+        mysubway.setFitView($select_obj);
+        var center = mysubway.getSelectedLineCenter();
+        mysubway.setCenter(center);
       });
     });
   }
