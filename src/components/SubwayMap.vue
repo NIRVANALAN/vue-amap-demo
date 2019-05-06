@@ -30,6 +30,7 @@ export default {
           `
         });
         */
+        /* Custom info window example
         mysubway.addInfoWindow("南锣鼓巷", {
           isCustom: true,
           content: `
@@ -41,12 +42,21 @@ export default {
           </div>
           `
         });
+        */
+        var detailOpts = {
+          type: "circle",
+          r: 14,
+          customClass: "custom_circle"
+        };
+
+        mysubway.addCustomNode("南锣鼓巷", detailOpts);
       });
     });
   }
 };
 </script>
 <style>
+/* Custom info window example
 .tip_out {
   position: relative;
 }
@@ -74,5 +84,13 @@ export default {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAALCAYAAACUPhZAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAG5JREFUeNpiNDY2FmNgYJgDxFIM1AOvgDidCcpIAeJn1DQYiB8zIQlQwwK4wSAOE5oEJRagGIxuOCUWYBiMzXByLMBqMC7DSbEAp8H4DCfGArwGEzIcnwUEDSbGcGwWEGUwsYYjW3CBWINBACDAACkeLdxbVjieAAAAAElFTkSuQmCC)
     center top no-repeat;
   background-size: 21px 10px;
+}
+*/
+.custom_circle {
+  width: 30px;
+  height: 30px;
+  fill: rgb(0, 122, 255);
+  fill-opacity: 0.4;
+  stroke-width: 0;
 }
 </style>
