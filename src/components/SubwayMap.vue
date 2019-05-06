@@ -52,12 +52,23 @@ export default {
 
         mysubway.addCustomNode("南锣鼓巷", detailOpts);
         */
+        /* Line filter example
         mysubway.showLine("2号线");
 
         var $select_obj = document.getElementById("g-select");
         mysubway.setFitView($select_obj);
         var center = mysubway.getSelectedLineCenter();
         mysubway.setCenter(center);
+        */
+        var start = "北土城",
+          end = "天安门西";
+
+        mysubway.setStart(start);
+        mysubway.setEnd(end);
+
+        mysubway.route(start, end, {
+          closeBtn: true
+        });
       });
     });
   }
