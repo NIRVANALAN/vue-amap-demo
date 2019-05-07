@@ -1,5 +1,5 @@
 <template>
-  <el-container style="height: 100%; border: 1px solid #eee">
+  <el-container style="height: 100%; solid #eee; display: flex">
     <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
       <el-menu :default-openeds="['1', '3']">
         <el-submenu index="1">
@@ -72,13 +72,21 @@
       <el-main id="map">
         <iframe src="./map.html" frameborder="0" style="height: 100%; width: 100%"></iframe>
       </el-main>
+
+      <el-footer>
+        <chart></chart>
+      </el-footer>
     </el-container>
   </el-container>
 </template>
 
 <script>
+import chart from "./components/Chart.vue";
 export default {
-  name: "app"
+  name: "app",
+  components: {
+    chart
+  }
 };
 </script>
 
@@ -91,10 +99,22 @@ export default {
 
 .el-aside {
   color: #333;
+  position: relative;
+  height: 100%;
 }
 
 #map {
   padding: 0%;
   position: relative;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  height: 100%;
+}
+
+html {
+  height: 100%;
 }
 </style>
